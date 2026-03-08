@@ -1,0 +1,64 @@
+.result-card {
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Variants ─────────────────────────────────────────── */
+.result-card.safe {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.result-card.danger {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.result-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.result-card.safe .result-icon {
+  color: var(--success);
+}
+
+.result-card.danger .result-icon {
+  color: var(--danger);
+}
+
+.result-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.result-card.safe .result-label {
+  color: var(--success);
+}
+
+.result-card.danger .result-label {
+  color: var(--danger);
+}
+
+.result-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  max-width: 380px;
+}
