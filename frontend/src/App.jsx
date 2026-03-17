@@ -44,7 +44,8 @@ function App() {
       }
 
       const data = await response.json();
-      setResult(data.prediction);
+      console.log("API Response:", data);
+      setResult(data);  // Store entire response including method and confidence
     } catch (err) {
       setError(err.message || "Something went wrong.");
     } finally {
@@ -62,11 +63,12 @@ function App() {
     <div className="app">
       <header className="app-header">
         <h1>
-          <span className="icon">&#128737;</span> Ransomware Detector
+          <span className="icon">&#128737;</span> Ransomware Detector (Hybrid)
         </h1>
         <p className="subtitle">
           Upload a Windows <code>.exe</code> file to classify it as{" "}
-          <strong>Benign</strong> or <strong>Ransomware</strong>.
+          <strong>Benign</strong> or <strong>Ransomware</strong> using hybrid
+          static and behavioral analysis.
         </p>
       </header>
 
@@ -93,11 +95,11 @@ function App() {
           </div>
         )}
 
-        {result && <ResultCard prediction={result} />}
+        {result && <ResultCard result={result} />}
       </main>
 
       <footer className="app-footer">
-        Ransomware Detection &mdash; Final Year Project
+        Ransomware Detection (Hybrid CNN + LSTM) &mdash; Final Year Project
       </footer>
     </div>
   );
