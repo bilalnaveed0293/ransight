@@ -1,6 +1,6 @@
 # Ransomware Detector — Full-Stack Web App
 
-Upload a Windows `.exe` file and classify it as **Benign** or **Ransomware** using a trained machine learning model.
+Upload a Windows `.exe` file and classify it as **Benign** or **Ransomware** using a trained deep learning model.
 
 ---
 
